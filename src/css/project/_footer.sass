@@ -1,0 +1,142 @@
+.footer
+  background-color: #fff
+  padding: 23px 22px 36px
+
+  &__logo-block
+    display: flex
+    margin-bottom: 27px
+
+  &__logo
+    border-right: 1px solid #e6e7e7
+    width: 50%
+
+    img
+      height: 53px
+      width: 103px
+
+  &__copyright
+    color: #7d7d7d
+    font-size: 16px
+    line-height: 30px
+    margin-bottom: 0
+
+  &__social
+    align-items: center
+    color: rgba(30, 30, 30, 0.6)
+    display: flex
+    line-height: 20px
+    opacity: 1
+    padding-left: 21px
+    transition: opacity 0.3s
+    text-decoration: none
+
+    &:hover,
+    &:active
+      opacity: 0.8
+
+  &__social-icon
+    fill: #1e1e1e
+    height: 20px
+    margin-right: 8px
+    width: 20px
+
+.footer-menu
+  margin-bottom: 27px
+
+  &.is-open
+    .footer-menu__list
+      max-height: 280px
+      opacity: 1
+      visibility: visible
+
+    .footer-menu__title
+      padding-bottom: 20px
+
+    .footer-menu__title-text
+      color: rgba(125, 125, 125, 0.65)
+
+      &::after
+        transform: rotate(180deg) translateY(50%)
+
+  &__title
+    color: #7d7d7d
+    cursor: pointer
+    font-size: 13px
+    font-weight: 500
+    letter-spacing: 1.5px
+    line-height: 11px
+    margin-bottom: 0
+    padding-top: 10px
+    padding-bottom: 10px
+    transition: padding 0.3s
+
+  &__title-text
+    color: rgba(125, 125, 125, 1)
+    display: block
+    padding-bottom: 0
+    position: relative
+    transition: all 0.3s
+
+    &::after
+      background: url('../images/icons/arrow-bottom.svg') no-repeat 50% 50% transparent
+      content: ''
+      height: 16px
+      left: auto
+      position: absolute
+      right: 0
+      top: 50%
+      transform: translateY(-50%)
+      width: 16px
+
+  &__list
+    max-height: 0
+    opacity: 0
+    overflow: hidden
+    transition: max-height 0.5s, opacity 0.5s, visibility 0.5s
+    visibility: hidden
+
+  &__item
+    margin-bottom: 0
+
+  &__link
+    color: #1e1e1e
+    display: inline-block
+    opacity: 1
+    padding-top: 8px
+    padding-bottom: 8px
+    transition: opacity 0.3s
+    text-decoration: none
+
+    &:hover,
+    &:active
+      opacity: 0.8
+
+.phone-title
+  color: #7d7d7d
+  font-size: 13px
+  font-weight: 500
+  letter-spacing: 1.5px
+  margin-bottom: 32px
+  opacity: 0.65
+  overflow: hidden
+  position: relative
+  white-space: nowrap
+
+  &::after
+    background: #e6e7e7
+    background-clip: border-box
+    background-clip: content-box
+    content: ''
+    display: inline-block
+    height: 1px
+    left: 12px
+    position: relative
+    vertical-align: middle
+    width: 100%
+
+.footer-phone
+  display: inline-block
+  font-size: 22px
+  line-height: 20px
+  margin-bottom: 36px
+  text-decoration: none

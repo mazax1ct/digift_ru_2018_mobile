@@ -1,0 +1,50 @@
+.cards-slider
+  margin-left: -11px
+  margin-right: -11px
+  margin-bottom: 13px
+
+  .slick-list,
+  .slick-track
+    height: 100%
+
+  .slick-track
+    align-items: stretch
+    display: flex
+    justify-content: flex-start
+
+  &__slide
+    display: flex
+    height: 100%
+    padding-left: 11px
+    width: 287px
+
+  &.slick-initialized
+    .cards-slider__slide
+      display: flex
+
+  &--white_dots
+    .slick-dots
+      li
+        button
+          background-color: #fff
+
+.to-list
+  align-items: center
+  background-color: rgba(30, 30, 30, 0.09)
+  display: flex
+  flex-direction: column
+  font-size: 18px
+  height: 100%
+  justify-content: center
+  letter-spacing: 0.4px
+  text-decoration: none
+  width: 100%
+
+  &--white
+    background-color: rgba(255,255,255,0.09)
+    color: #fff
+
+  &__icon
+    height: 62px
+    margin-bottom: 18px
+    width: 62px

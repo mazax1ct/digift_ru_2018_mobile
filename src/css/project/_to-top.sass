@@ -1,0 +1,37 @@
+.to-top
+  align-items: center
+  background-color: #38393d
+  border: none
+  border-radius: 6px
+  bottom: 8px
+  cursor: pointer
+  display: flex
+  height: 48px
+  justify-content: center
+  left: auto
+  outline: none
+  opacity: 0
+  padding: 0
+  right: 8px
+  transition: all 0.3s
+  position: fixed
+  top: auto
+  visibility: hidden
+  width: 48px
+  z-index: 1
+
+  &.is-active
+    opacity: 0.4
+    visibility: visible
+
+  &:hover,
+  &:focus
+    color: transparent
+    outline: none
+    opacity: 0.6
+
+  &__icon
+    fill: #fff
+    height: 24px
+    vertical-align: middle
+    width: 24px

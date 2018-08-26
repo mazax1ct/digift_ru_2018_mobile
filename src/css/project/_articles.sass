@@ -1,0 +1,45 @@
+.article
+  background-color: #fff
+  display: flex
+  flex-flow: column
+  min-height: 324px
+  opacity: 1
+  transition: opacity 0.3s
+  text-decoration: none
+  width: 276px
+
+  &:hover,
+  &:active
+    opacity: 0.9
+
+  &__image
+    display: block
+    min-height: 134px
+
+  &__text
+    display: block
+    padding: 30px 24px
+
+  &__tag
+    color: rgba(30, 30, 30, 0.45)
+    display: block
+    font-size: 13px
+    font-weight: 500
+    letter-spacing: 1.5px
+    margin-bottom: 12px
+
+  &__preview-text
+    display: block
+
+.articles-list
+  display: flex
+  flex-wrap: wrap
+
+  &__item
+    max-width: 384px
+    margin-bottom: 24px
+    padding-right: 24px
+    width: 50%
+
+  .article
+    height: 100%
