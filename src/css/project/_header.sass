@@ -15,6 +15,16 @@
       height: 44px
       width: 88px
 
+  &.is-open
+    background-color: #fff
+    height: 100%
+
+    .header__inner
+      box-shadow: 0 0 5px rgba(0,0,0,0.1)
+
+    .main-menu
+      display: block
+
   &--white
     color: #fff
 
@@ -102,23 +112,48 @@
 
 .main-menu
   display: none
+  height: calc(100% - 24px - 60px)
+  overflow-y: auto
+  padding-top: 24px
   width: 100%
 
   &__section
+    margin-bottom: 37px
+
+    &:last-child
+      margin-bottom: 0
 
   &__section-title
     color: #7d7d7d
     font-size: 13px
     font-weight: 500
+    line-height: 11px
     letter-spacing: 1.5px
+    margin-right: 22px
+    margin-bottom: 20px
     opacity: 0.65
+    overflow: hidden
+    padding-left: 22px
     text-transform: uppercase
+    white-space: nowrap
+
+    &::after
+      background: #e6e7e7
+      background-clip: border-box
+      background-clip: content-box
+      content: ''
+      display: inline-block
+      height: 1px
+      left: 12px
+      margin-top: -1px
+      position: relative
+      vertical-align: middle
+      width: 100%
 
   &__link
     color: #1e1e1e
     display: block
-    padding-top: 8px
-    padding-bottom: 8px
+    padding: 8px 22px
     transition: opacity 0.3s
     text-decoration: none
 

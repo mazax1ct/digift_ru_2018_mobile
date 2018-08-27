@@ -30,6 +30,14 @@ $(document).ready(function() {
     });
   }
 
+  //открытие/закрытие главного меню
+  $(".js-menu-opener").click(function() {
+    $(this).toggleClass("is-active");
+    $("body").toggleClass("overflow");
+    $(".header").toggleClass("is-open");
+    return false;
+  });
+
   //форма
   $('.js-input').each(function( index ) {
     if ($(this).val() != 0) {
@@ -45,14 +53,6 @@ $(document).ready(function() {
         $(this).removeClass('changed');
       }
     });
-  });
-
-  //открытие/закрытие главного меню
-  $(".js-menu-opener").click(function() {
-    $(this).toggleClass("is-active");
-    $("body").toggleClass("overflow");
-    $(".main-menu-block").toggleClass("is-open");
-    return false;
   });
 
   //замена ссылок в контактах
