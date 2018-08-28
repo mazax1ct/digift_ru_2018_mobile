@@ -15,6 +15,17 @@
       height: 44px
       width: 88px
 
+    .menu-opener
+      span
+        background-color: #1e1e1e
+
+        &::after,
+        &::before
+          background-color: #1e1e1e
+
+    .header__buy-icon
+      fill: #1e1e1e
+
   &.is-open
     background-color: #fff
     height: 100%
@@ -26,8 +37,6 @@
       display: block
 
   &--white
-    color: #fff
-
     .menu-opener
       span
         background-color: #fff
@@ -35,6 +44,9 @@
         &::after,
         &::before
           background-color: #fff
+
+    .header__buy-icon
+      fill: #fff
 
   &__inner
     align-items: center
