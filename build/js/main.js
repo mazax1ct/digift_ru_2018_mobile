@@ -77,7 +77,7 @@ $(document).ready(function() {
   });
 
   //заголовки - аккордеоны
-  $(".accordion-title__title").click(function() {
+  $(".js-accordion-opener").click(function() {
     $(this).parent('.accordion-title').toggleClass('is-open');
     return false;
   });
