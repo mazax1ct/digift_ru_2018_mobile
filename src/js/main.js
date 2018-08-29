@@ -82,6 +82,31 @@ $(document).ready(function() {
     return false;
   });
 
+  //открытие левого меню
+  $(".js-left-menu-opener").click(function() {
+    $('body').addClass('overflow');
+    $(this).addClass('is-active');
+    $('.left-menu').fadeIn(200).addClass('is-open');;
+    setTimeout(function() {
+      $('.left-menu__list').addClass('is-open');
+    }, 200);
+    return false;
+  });
+
+  //закрытие левого меню
+  $('.left-menu').click(function(event) {
+    if (event.target.tagName !== 'A') {
+      $('.left-menu__list').removeClass('is-open');
+      setTimeout(function() {
+        $('.left-menu').fadeOut(200).removeClass('is-open');
+        $('body').removeClass('overflow');
+        $(this).removeClass('is-active');
+        $('.js-left-menu-opener').removeClass('is-active');
+      }, 200);
+      return false;
+    }
+  });
+
   //меню в футере - аккордеоны
   $(".footer-menu__title").click(function() {
     $(this).parent('.footer-menu').toggleClass('is-open');

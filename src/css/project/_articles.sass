@@ -34,12 +34,23 @@
 .articles-list
   display: flex
   flex-wrap: wrap
-
-  &__item
-    max-width: 384px
-    margin-bottom: 24px
-    padding-right: 24px
-    width: 50%
+  justify-content: center
 
   .article
-    height: 100%
+    margin-bottom: 11px
+    width: 298px
+
+    &:nth-child(even)
+      @media(min-width: 630px)
+        margin-left: 6px
+
+    &:nth-child(odd)
+      @media(min-width: 630px)
+        margin-right: 6px
+
+    &:last-child
+      margin-bottom: 0
+
+    &:nth-last-child(2)
+      @media(min-width: 630px)
+        margin-bottom: 0
