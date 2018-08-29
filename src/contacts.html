@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Digift.ru - О компании</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/style.html
+  </head>
+  <body>
+    //= template/sprite.html
+    //= template/header.html
+    <div class="contacts">
+      <div id="contacts-map" class="contacts__map"></div>
+      <div class="contacts__content">
+        <div class="contacts__block contacts__phone">
+          <div class="contacts__block-inner">
+            <div>
+              <p class="contacts__label">Телефон</p>
+              <p class="contacts__text"><a href="tel:88003330778">8 800 333 0778</a></p>
+            </div>
+            <svg class="contacts__icon icon icon--dark_green" aria-hidden="true"><use xlink:href="#phone"/></svg>
+          </div>
+        </div>
+        <div class="contacts__block contacts__address">
+          <div class="contacts__block-inner">
+            <div>
+              <p class="contacts__label">Адрес</p>
+              <p class="contacts__text">Санкт-Петербург,<br> ул. Сердобольская,<br> д. 44</p>
+            </div>
+            <svg class="contacts__icon icon icon--white" aria-hidden="true"><use xlink:href="#pin"/></svg>
+          </div>
+        </div>
+        <div class="contacts__block contacts__emails">
+          <div class="contacts__block-inner">
+            <div>
+              <p class="contacts__label">Поддержка клиентов</p>
+              <p class="contacts__text">
+                <span class="js-change-link" data-link="<a href='mailto:support@digift.ru'>Support@digift.ru</a>"><img width="177" height="30" src="images/content/support_email.jpg" alt="Support@digift.ru"></span>
+              </p>
+              <p class="contacts__label">Сотрудничество</p>
+              <p class="contacts__text">
+                <span class="js-change-link" data-link="<a href='mailto:partner@digift.ru'>Partner@digift.ru</a>"><img width="169" height="30" src="images/content/partners_email.jpg" alt="Partner@digift.ru"></span>
+              </p>
+              <p class="contacts__label">Для СМИ</p>
+              <p class="contacts__text">
+                <span class="js-change-link" data-link="<a href='mailto:pr@digift.ru'>Pr@digift.ru</a>"><img width="116" height="30" src="images/content/pr_email.jpg" alt="Pr@digift.ru"></span>
+              </p>
+            </div>
+            <svg class="icon icon--grey" aria-hidden="true"><use xlink:href="#at"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+     <a class="js-to-top to-top" href="#top" title="Наверх"><svg class="to-top__icon" aria-hidden="true"><use xlink:href="#arrow-top"/></svg></a>
+    //= template/scripts.html
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfgRF4t3ph-ZJSEXkxIJr-H08zNYQvqb4&callback=initContactsMap" async defer></script>
+    <script>
+
+      var mapCenter = { lat: 59.990200, lng: 30.318768 };
+
+      if($(window).height() > 400) {
+        var mapCenter = { lat: 59.989700, lng: 30.318768 };
+      }
+
+      if($(window).height() > 570) {
+        var mapCenter = { lat: 59.989300, lng: 30.318768 };
+      }
+
+      if($(window).height() > 710) {
+        var mapCenter = { lat: 59.989000, lng: 30.318768 };
+      }
+
+      //карта в контактах
+      function initContactsMap() {
+
+        var myLatLng = { lat: 59.990089, lng: 30.318768 };
+
+        var stylesArray = [
+          {
+            "featureType": "administrative",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#444444"
+              }
+            ]
+          },
+          {
+            "featureType": "landscape",
+            "elementType": "all",
+            "stylers": [
+              {
+                "color": "#f2f2f2"
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "all",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "all",
+            "stylers": [
+              {
+                "saturation": -100
+              },
+              {
+                "lightness": 45
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "all",
+            "stylers": [
+              {
+                "visibility": "simplified"
+              }
+            ]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "elementType": "all",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "all",
+            "stylers": [
+              {
+                "color": "#dedee4"
+              },
+              {
+                "visibility": "on"
+              }
+            ]
+          }
+        ];
+
+        var popupContent = '<p class="content">Санкт-Петербург,<br> ул. Сердобольская,<br> д. 44</p>';
+
+        var map = new google.maps.Map(document.getElementById("contacts-map"), {
+          zoom: 17,
+          center: mapCenter,
+          scrollwheel: false,
+          zoomControl: false,
+          scaleControl: false,
+          mapTypeControl: false,
+          streetViewControl: false,
+          fullscreenControl: false,
+          styles: stylesArray
+        });
+
+        var image = {
+          url: "images/icons/map-pin.png",
+          size: new google.maps.Size(43, 51),
+          origin: new google.maps.Point(0, 0),
+          anchor: new google.maps.Point(21, 51)
+        };
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          icon: image
+        });
+
+        infowindow = new google.maps.InfoWindow({
+          content: popupContent
+        });
+
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+        });
+      }
+    </script>
+  </body>
+</html>
