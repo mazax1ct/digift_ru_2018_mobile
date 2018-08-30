@@ -19,16 +19,16 @@
     height: 100vh
     left: auto
     overflow-y: auto
-    padding: 36px 60px 0
+    padding: 25px 22px 0
     position: absolute
-    right: -450px
+    right: -100%
     top: 0
     transition: right 0.3s
-    width: 450px
+    width: 100%
     z-index: 3
 
-    @media(min-height: 768px)
-      padding: 72px 60px 0
+    @media(min-height: 600px)
+      padding-top: 48px
 
     &--finish
       justify-content: center
@@ -41,11 +41,11 @@
     display: flex
     flex-flow: column
     flex-grow: 1
-    padding-bottom: 36px
+    padding-bottom: 23px
     position: relative
 
-    @media(min-height: 768px)
-      padding-bottom: 72px
+    @media(min-height: 600px)
+      padding-bottom: 48px
 
   &__close
     align-items: center
@@ -74,24 +74,18 @@
     width: 24px
 
   &__title
-    font-size: 30px
-    line-height: 30px
-    margin-bottom: 15px
-
-    @media(min-height: 700px)
-      margin-bottom: 35px
-
-    @media(min-height: 768px)
-      margin-bottom: 70px
+    font-size: 26px
+    line-height: 32px
+    margin-bottom: 12px
 
   &__button
     display: block
-    margin-top: 10px
-    padding-top: 24px
-    padding-bottom: 40px
+    margin-top: 24px
+    padding-top: 22px
+    padding-bottom: 38px
     width: 100%
 
-    @media(min-height: 700px)
+    @media(min-height: 550px)
       margin-top: auto
 
 .congratulation

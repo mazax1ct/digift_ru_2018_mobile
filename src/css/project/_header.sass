@@ -15,6 +15,18 @@
       height: 44px
       width: 88px
 
+  &.is-open
+    background-color: #fff
+    height: 100%
+
+    .header__inner
+      box-shadow: 0 0 5px rgba(0,0,0,0.1)
+
+    .main-menu
+      display: block
+
+  &.scrolled,
+  &.is-open
     .menu-opener
       span
         background-color: #1e1e1e
@@ -25,16 +37,6 @@
 
     .header__buy-icon
       fill: #1e1e1e
-
-  &.is-open
-    background-color: #fff
-    height: 100%
-
-    .header__inner
-      box-shadow: 0 0 5px rgba(0,0,0,0.1)
-
-    .main-menu
-      display: block
 
   &--white
     .menu-opener

@@ -112,4 +112,24 @@ $(document).ready(function() {
     $(this).parent('.footer-menu').toggleClass('is-open');
     return false;
   });
+
+  //открытие формы скачивания кейса
+  $('.js-case-form-opener').click(function() {
+    $('body').addClass('overflow');
+    $('.case-form').fadeIn(200).addClass('is-open');
+    setTimeout(function() {
+      $('.case-form__form-block').addClass('is-open');
+    }, 300);
+    return false;
+  });
+
+  //закрытие формы скачивания кейса
+  $('.js-case-form-closer').click(function() {
+    $('.case-form__form-block').removeClass('is-open');
+    setTimeout(function() {
+      $('.case-form').fadeOut(200).removeClass('is-open');
+      $('body').removeClass('overflow');
+    }, 300);
+    return false;
+  });
 });
