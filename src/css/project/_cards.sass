@@ -52,21 +52,41 @@
   flex-wrap: wrap
   justify-content: center
 
-  .card
+  &__item
+    max-width: 392px
     margin-bottom: 11px
-    width: 298px
+    width: 100%
+
+    @media(min-width: 600px)
+      width: 50%
+
+    @media(min-width: 1200px)
+      padding-right: 6px
+      padding-left: 6px
+      width: 33.333%
 
     &:nth-child(even)
-      @media(min-width: 630px)
-        margin-left: 6px
+      @media(min-width: 600px)
+        padding-left: 6px
 
     &:nth-child(odd)
-      @media(min-width: 630px)
-        margin-right: 6px
+      @media(min-width: 600px)
+        padding-right: 6px
 
     &:last-child
       margin-bottom: 0
 
     &:nth-last-child(2)
-      @media(min-width: 630px)
+      @media(min-width: 600px)
         margin-bottom: 0
+
+  .card
+    position: relative
+    padding-bottom: 100%
+    width: 100%
+
+  .card__inner
+    height: 100%
+    left: 0
+    position: absolute
+    top: 0
