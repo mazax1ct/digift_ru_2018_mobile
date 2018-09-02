@@ -1,3 +1,10 @@
+//компенсация высоты окна при скрытии адресной строки
+window.onresize = function(){
+    document.body.height = window.innerHeight;
+}
+
+window.onresize();
+
 //активация кнопки "наверх"
 $(window).scroll(function () {
   if ($(this).scrollTop() > 30) {
@@ -21,6 +28,7 @@ $(document).ready(function() {
   //слайдер карточек
   if ($('.js-cards-slider').length) {
     $('.js-cards-slider').slick({
+      speed: 100,
       adaptiveHeight: true,
       arrows: false,
       infinite: false,
