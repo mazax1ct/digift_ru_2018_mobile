@@ -57,24 +57,13 @@
         </div>
       </div>
     </div>
+    //= template/footer.html
      <a class="js-to-top to-top" href="#top" title="Наверх"><svg class="to-top__icon" aria-hidden="true"><use xlink:href="#arrow-top"/></svg></a>
     //= template/scripts.html
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfgRF4t3ph-ZJSEXkxIJr-H08zNYQvqb4&callback=initContactsMap" async defer></script>
     <script>
 
-      var mapCenter = { lat: 59.990200, lng: 30.318768 };
-
-      if($(window).height() > 400) {
-        var mapCenter = { lat: 59.989700, lng: 30.318768 };
-      }
-
-      if($(window).height() > 570) {
-        var mapCenter = { lat: 59.989300, lng: 30.318768 };
-      }
-
-      if($(window).height() > 710) {
-        var mapCenter = { lat: 59.989000, lng: 30.318768 };
-      }
+      var mapCenter = { lat: 59.989100, lng: 30.318768 };
 
       //карта в контактах
       function initContactsMap() {

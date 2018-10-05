@@ -1,21 +1,26 @@
 .contacts
   background-color: #fff
   line-height: 24px
-  height: 100%
   position: relative
+  padding-top: 234px
+  z-index: 1
 
   &__map
+    left: 0
     min-height: 100%
+    position: absolute
+    top: 0
     width: 100%
+    z-index: 1
 
   &__title
     height: 0
     left: 0
     position: absolute
     text-align: center
-    top: 15%
+    top: 11%
     width: 100%
-    z-index: 1
+    z-index: 2
 
     @media(min-height: 600px)
       top: 12%
@@ -24,16 +29,9 @@
       top: 10%
 
   &__content
-    left: 0
     padding: 0 11px 11px
-    position: absolute
-    top: 234px
-    width: 100%
-    z-index: 1
-
-    @media(min-height: 737px)
-      bottom: 0
-      top: auto
+    position: relative
+    z-index: 2
 
   &__block
     padding: 21px 24px 25px
